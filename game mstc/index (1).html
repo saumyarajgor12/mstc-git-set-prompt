@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Nova Strike — Boss Run</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="game">
+    <canvas id="canvas"></canvas>
+    <header class="hud">
+      <div class="brand">NOVA STRIKE<small>BOSS RUN</small></div>
+      <section class="meters">
+        <div id="bossPanel" class="hidden"><span id="bossName">BOSS</span><div class="bar boss"><i id="bossHealth"></i></div></div>
+        <div class="bar"><i id="health"></i></div>
+      </section>
+      <section class="stats">
+        <div>SCORE<strong id="score">0</strong></div>
+        <div>CREDITS<strong id="credits">0</strong></div>
+        <div>LIVES<strong id="lives">3</strong></div>
+      </section>
+    </header>
+    <aside class="chips">
+      <div id="novaChip">NOVA BLAST: 0%</div>
+      <div id="droneChip">COMPANION: OFFLINE</div>
+      <div>MOVE: WASD / ARROWS<br>FIRE: SPACE · NOVA: E</div>
+    </aside>
+    <div id="notice"></div>
+    <section id="startScreen" class="screen">
+      <h1>NOVA <b>STRIKE</b></h1>
+      <p>Fly through the entire sector, upgrade your spacecraft and survive three dangerous bosses with unique attacks.</p>
+      <p class="hint">Move: WASD / arrow keys · Fire: SPACE · Nova Blast: E</p>
+      <button id="startButton">LAUNCH MISSION</button>
+    </section>
+    <section id="shop" class="screen hidden">
+      <div class="dialog">
+        <h2>SPACE STATION UPGRADES</h2>
+        <p>Spend credits earned during your run.</p>
+        <div id="upgradeList"></div>
+        <button id="continueButton">CONTINUE BATTLE</button>
+      </div>
+    </section>
+    <section id="gameOver" class="screen hidden">
+      <h1>MISSION <b>FAILED</b></h1>
+      <h2 id="finalScore"></h2>
+      <button id="againButton">TRY AGAIN</button>
+    </section>
+    <nav class="mobile">
+      <button id="mobileFire">●</button>
+      <button id="mobileNova">✦</button>
+    </nav>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
